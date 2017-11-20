@@ -16,7 +16,7 @@ class SongsController < ApplicationController
 
   def create
 	  @song = Song.new(post_params(:name))
-    #binding.pry
+    binding.pry
     @song.update(artist_id: params[:artist_id], genre_id: params[:genre_id])
 	  redirect_to song_path(@song)
 	end
